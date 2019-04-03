@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Syntax</title>
+</head>
+<body>
+<!-- Define attributes / variables:
+A number with out decimals saved to variable X and printed to the Console.-->
+	<script>
+		var x = 45; 
+		console.log("The number entered is  " + x);
+	</script>
+
+<!-- A string can be any text inside double or single quotes and printed to the Console.-->
+	<script>
+		var Name = "Kristina";
+		console.log(Name);
+	</script>
+<!-- JavaScript booleans can have one of two values: true or false and then printed to the Console.-->
+	<script>
+		console.log(10>2);
+	</script>
+<!-- The Array object is used to store multiple values in a single variable and then printed to the Console.-->
+	<script>
+		var dogs = ["boxer", "poodle", "lab"];
+		console.log(dogs[0]);
+	</script>
+<!-- Define (and create) a JavaScript object with an object literal and then printed to the Console.-->
+	<script>
+		var student = {firstName:"Kristina", lastName:"Davidson", level:"Beginner"};
+		console.log(student.firstName + " is a " + student.level + " student.");
+	</script>
+<!-- Undefined is used when nothing is assigned to a variable and then print result to the Console.-->
+	<script>
+		var animal;
+		console.log(animal);
+	</script>
+
+<!-- Display a sample of an if / else statement -->
+	<script>
+		var classTime = "8";
+		if (classTime < 9) {
+			console.log("You are early.");
+		} else {
+			console.log("You are right on time.")
+		}
+	</script>
+
+<!-- A JavaScript function is a block of code designed to perform a particular task and print result to the Console. -->
+	<script>
+		function testFunction(a,b){
+			return a*b;
+		}
+		console.log(testFunction(10,10))
+	</script>
+
+<!-- JavaScript arrays are used to store multiple values in a single variable and print result to the Console. -->
+	<script>
+		fruits =["Grapes","Apple","Mango"]
+		console.log(fruits);
+		fruits.push("Strawberry"); // The push() method adds a new element to an array (at the end).
+		console.log(fruits);
+		fruits.unshift("Orange"); // The unshift() method adds a new element to an array (at the beginning).
+		console.log(fruits);
+		fruits[0]="Kiwi"; // Array elements are accessed using their index number.
+		console.log(fruits);
+	</script>
+
+<!-- The For statement - loops through a block of code a number of times.-->
+	<script>
+		var choreList = ["dishes","vacuum","laundry"];
+		for (var i = 0; i < choreList.length; i++) {
+			console.log("The chore to do is " + choreList[i]);
+		}
+	</script>
+
+<!-- The For/In statement - loops through the properties of an object..-->
+	<script>
+		var string1 = "";
+		var object1 = {a: 1, b: 2, c: 3};
+
+		for (var property1 in object1){
+			string1 += object1[property1];
+		}
+		console.log(string1)
+	</script>
+
+<!-- The While statement - loops through block of code as long as a specified condition is true.-->
+	<script>
+		var array1 =[];
+		var x=0;
+		while(x<10){
+			array1.push(x);
+			x++;
+		}
+		console.log(array1);
+	</script>
+
+<!-- The Do While statement - This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.-->
+	<script>
+		var students = 1;
+		do {
+			console.log("The number of programs equals " + students);
+			students++;
+		} 	while (students <= 10);
+	</script>
+
+<!-- The For Each statement - This loop calls a provided function once for each element in an array, in order.-->
+	<script>
+		var total_cost = 0;
+
+		function add_to_total_cost(amount) {
+			total_cost += amount.cost;
+		}
+	 
+		var shopping_cart_1 = [{item: 'shirt', cost: 22}, 
+			{item: 'shorts', cost: 26},{item: 'shoes', cost: 54}];
+			shopping_cart_1.forEach(add_to_total_cost);
+			console.log(total_cost);
+	</script>
+
+<!-- The following shows how to create a dictionary/object with Javascript.-->
+<script>
+	const person = {firstName: "Jim", lastName: "Woods", age: "70", hobby: "hockey"};
+// First we declare the object.
+	console.log(person["age"]);
+	console.log(person.firstName);
+	console.log(person["hobby"]);
+	console.log(person.lastName);
+// Second get the value for the all strings using the two different methods.
+	for (const key in person){
+		const value = person[key];
+		console.log(key + ": " + value);
+	}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

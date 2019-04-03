@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculators</title>
+	<link rel="stylesheet" type="text/css" href="c:/evolveu/javascript/simplecalc.css">
+</head>
+<body>
+<!-- Creating a simple Calculator-->
+<div id="idDivBox" class="fed-container">
+	<h2>My Simple Calculator</h2>
+
+		First number:<input id="idIn1" type="text"/><br>
+		Second number:<input id="idIn2" type="text"/><br>
+		Result:<input id="idAnswer" type="text" /><br><br>
+
+		<button id="idAddBtn">+</button>
+		<button id="idSubBtn">-</button>
+		<button id="idMultBtn">*</button>
+		<button id="idDivBtn">/</button>
+		<button id="idClrBtn">Clear</button>
+</div>
+
+<!-- Creating a Canadian Tax Calculator -->
+<div id="idDivTax" class="prov-container">
+	<h2>Canadian Tax Calculator</h2>
+
+	Enter Taxable Income:<input id="idIncome" type="text"/><br><br><br>
+	<input id="idFedTax" type="text"/>  Federal Tax<br>
+	<input id="idProvTax" type="text"/>  Alberta Tax<br><br>
+	<input id="idTotalTax" type="text"/>  Taxes for 2019<br><br>
+
+	Click to Calculate Federal & Alberta Taxes:<button id="idCalcBtn">Calculate</button><br><br>
+	<button id="idResetBtn">Reset</button>
+
+</div>
+
+	<script type="text/javascript" src="simplecalc.js"></script>
+</body>
+</html>

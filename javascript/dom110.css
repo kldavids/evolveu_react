@@ -1,0 +1,26 @@
+.main-container {
+	background-color: #1ce6ad;
+	width: 200px;
+	height: 250px;
+	margin: 30px;
+	padding: 25px;
+	border-radius: 45px 87px 86px 45px;
+	-moz-border-radius: 45px 87px 86px 45px;
+	-webkit-border-radius: 45px 87px 86px 45px;
+	border: 4px solid #000000;
+	}
+
+h1 {
+	color: purple;
+}
+
+
+.left-half {
+	background: grey;
+	grid-column: 1;
+}
+
+.right-half {
+	background: lightblue;
+	grid-column: 2;
+}
