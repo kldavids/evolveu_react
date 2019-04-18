@@ -8,7 +8,37 @@
   pointer-events: none;
 }
 
-.App-header {
+.App-logo-stop {
+  animation: App-logo-spin infinite 0s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-dolphin {
+  animation: App2-logo-spin infinite 10s linear;
+  height: 20vmin;
+  pointer-events: fill;
+}
+
+.App-fish {
+  animation: App-logo-spin infinite 10s linear;
+  height: 20vmin;
+  pointer-events: fill;
+}
+
+.App-frog {
+  animation: App2-logo-spin infinite 10s linear;
+  height: 15vmin;
+  pointer-events: fill;
+}
+
+.App-crab {
+  animation: App-logo-spin infinite 10s linear;
+  height: 17vmin;
+  pointer-events: fill;
+}
+
+.App-main {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -29,5 +59,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes App2-logo-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
