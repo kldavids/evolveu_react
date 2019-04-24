@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 
-function Main() {
+function MainLogo() {
   return(
     <main className="App-main">
       <img src={logo} className="App-logo" alt="logo" />
@@ -20,4 +20,4 @@ function Main() {
   );
 }  
 
-export default Main;
+export default MainLogo;

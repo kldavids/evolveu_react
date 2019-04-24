@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import Main from './Main';
+import MainLogo from './components/MainLogo';
+import MathComp from './components/MathComp';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state={}
+  constructor(props) {
+    super(props);
+    this.state={
+
+    }
   }
   handleClick = () => {
     console.log("I was clicked");
@@ -16,7 +19,8 @@ class App extends Component {
       <div className="App">
         <h1 onClick={() => console.log("I was clicked!")}>Hello World</h1>
         <Navbar handleClick={this.handleClick}/>
-        <Main />
+        <MainLogo />
+        <MathComp />
       </div>
     );
   }
