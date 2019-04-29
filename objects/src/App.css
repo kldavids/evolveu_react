@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .App-logo {
@@ -14,32 +15,43 @@
   pointer-events: none;
 }
 
+.App-home {
+  animation: App-logo-spin infinite 0s linear;
+  height: 15vmin;
+  pointer-events: fill;
+  padding: 3vmin;
+}
+
 .App-dolphin {
   animation: App2-logo-spin infinite 10s linear;
   height: 20vmin;
   pointer-events: fill;
+  padding: 3vmin;
 }
 
 .App-fish {
   animation: App-logo-spin infinite 10s linear;
   height: 20vmin;
   pointer-events: fill;
+  padding: 3vmin;
 }
 
 .App-frog {
   animation: App2-logo-spin infinite 10s linear;
   height: 15vmin;
   pointer-events: fill;
+  padding: 3vmin;
 }
 
 .App-crab {
   animation: App-logo-spin infinite 10s linear;
   height: 17vmin;
   pointer-events: fill;
+  padding: 3vmin;
 }
 
 .App-main {
-  background-color: #282c34;
+  background-color: #19408d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -70,3 +82,16 @@
     transform: rotate(0deg);
   }
 }
+
+.fed-container {
+	background-color: ##dfe61c;
+	width: 200px;
+	height: 250px;
+	margin: 30px;
+	padding: 25px;
+	border-radius: 45px 87px 86px 45px;
+	-moz-border-radius: 45px 87px 86px 45px;
+	-webkit-border-radius: 45px 87px 86px 45px;
+  border: 4px solid #000000;
+  align-self: center;
+	}

@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from '../images/logo.svg';
 
-function MainLogo() {
+function LogoBody() {
   return(
     <main className="App-main">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={logo} className="App-logo" alt="logo" id="home"/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -20,4 +20,4 @@ function MainLogo() {
   );
 }  
 
-export default MainLogo;
+export default LogoBody;

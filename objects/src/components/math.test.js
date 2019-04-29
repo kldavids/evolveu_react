@@ -1,8 +1,10 @@
-import math from '../components/math';
+import math from './math';
+import { notDeepEqual } from 'assert';
 
 test('Test the addition function', () => {
   expect(math.sum(1,2)).toBe(3);
-  // expect(math.sum(5,2)).toBe(3);
+  expect(math.sum(5,2)).not.toBe(3);
+ 
 });
 
 test('Test the subtraction function', () => {
@@ -11,6 +13,7 @@ test('Test the subtraction function', () => {
 
 test('Test the divide function', () => {
   expect(math.divide(10,2)).toBe(5);
+  expect(math.divide(5,3)).not.toBe(5);
 });
 
 test('Test the multiplicaiton function', () => {

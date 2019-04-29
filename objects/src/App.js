@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
-import MainLogo from './components/MainLogo';
+import Navbar from './components/Navbar';
+import LogoBody from './components/LogoBody';
 import MathComp from './components/MathComp';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-
+  constructor() {
+    super();
+    this.state = {
+      clickName: "react"
     }
   }
-  handleClick = () => {
-    console.log("I was clicked");
-  }
+
+  handleClick = (e) => {
+    this.setState({clickName: e.target.name})
+    }
+  
 
   render() {
     return (
       <div className="App">
-        <h1 onClick={() => console.log("I was clicked!")}>Hello World</h1>
+        <h1>Kristina's Desk</h1>
         <Navbar handleClick={this.handleClick}/>
-        <MainLogo />
-        <MathComp />
+        {(this.state.clickName === "math")  ? <MathComp /> : null}
+        {(this.state.clickName === "react") ? <LogoBody /> : null}
+        
+        
       </div>
     );
   }
