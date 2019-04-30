@@ -8,7 +8,7 @@ class MathComp extends React.Component {
       result: ""
     }
   }
-// our method to handle all click events from the math operators
+// method to handle all click events from the math operators
   handleMath = (e) => {
     // console.log("in handleMath");
     const operator = e.target.getAttribute("operator");
