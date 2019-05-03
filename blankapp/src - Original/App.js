@@ -1,15 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
-import Part1Comp from './components/Part1Comp';
-import Part2Comp from './components/Part2Comp';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <h3>I am in control of this application and my name is Kristina</h3>
-      <Part1Comp />
-      <Part2Comp />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
