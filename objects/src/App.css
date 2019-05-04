@@ -87,9 +87,10 @@
 	background-color: #7fcea6;
 	width: 300px;
 	height: 200px;
-  padding: 25px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 10px;
+  margin: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   display: block;
 	border-radius: 45px 87px 86px 45px;
 	-moz-border-radius: 45px 87px 86px 45px;
@@ -112,7 +113,12 @@
     border: 3px solid #000000;
   }
 
-  .button {
+  button {
+    background-color: red;
+    /* border: none; */
+  }
+    
+  .text-btn {
     background-color: #1f1e38;
     border: 2px solid #000000;
     color: white;
@@ -127,5 +133,18 @@
     cursor: pointer;
   }
 
-  .button:hover {opacity: 1}
+  .text-btn:hover {opacity: 1}
+
+  .icon-btn {
+    /* border: none; */
+    /* background-color: none; */
+    padding: none;
+    margin: 3px;
+    height: 25px;
+  }
+
+  .icon-img{
+    height: 20px;
+    width: 20px;
+  }
   

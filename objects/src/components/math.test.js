@@ -1,5 +1,4 @@
 import math from './math';
-import { notDeepEqual } from 'assert';
 
 test('Test the addition function', () => {
   expect(math.sum(1,2)).toBe(3);

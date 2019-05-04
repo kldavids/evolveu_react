@@ -1,5 +1,9 @@
 import React from 'react';
 import math from './math';
+import multiplyicon from '../images/multiplyicon.png';
+import divideicon from '../images/divideicon.png';
+import addicon from '../images/addicon.png';
+import subicon from '../images/subicon.png';
 
 class MathComp extends React.Component {
   constructor() {
@@ -50,14 +54,26 @@ class MathComp extends React.Component {
     return (
       <div className="math-container">
         <h2>My Simple Calculator</h2>
-        Enter number:<input id="input1" type="number"/>
-        Enter number:<input id="input2" type="number"/>
+        <input id="input1" type="number" placeholder="Enter 1st Number"/>
+        <input id="input2" type="number" placeholder="Enter 2nd Number"/>
         <hr></hr>
-        <button operator="Add" onClick={this.handleMath}>+</button>
-        <button operator="Sub" onClick={this.handleMath}>-</button>
-        <button operator="Multiply" onClick={this.handleMath}>*</button>
-        <button operator="Divide" onClick={this.handleMath}>/</button>
-        <button operator="Clear" onClick={this.handleMath}>Clear</button>
+        <button className="icon-btn" operator="Add" onClick={this.handleMath}>
+          <img  className="icon-img" src={addicon} />
+        </button>
+
+        <button className="icon-btn" operator="Sub" onClick={this.handleMath}>
+          <img  className="icon-img" src={subicon} />
+        </button>
+
+        <button className="icon-btn" operator="Divide" onClick={this.handleMath}>
+          <img  className="icon-img" src={divideicon} />
+        </button>
+        
+        <button className="icon-btn" operator="Multiply" onClick={this.handleMath}>
+          <img  className="icon-img" src={multiplyicon} />
+        </button>
+        
+        <button className="icon-btn" operator="Clear" onClick={this.handleMath}>Clear</button>
         <hr></hr>
         <p>Result: {this.state.result}</p>
       </div>

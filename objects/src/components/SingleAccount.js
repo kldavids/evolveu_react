@@ -14,9 +14,9 @@ class SingleAccount extends React.Component {
   // create an account
   onCreateClick = () => {
     console.log("in onCreate");
-    const initialBalance = Number(document.getElementById("initialBalance").value);
-    console.log("balance", initialBalance);
-    this.setState({myaccount: new Account("savings", initialBalance, 1), myBalance: initialBalance});
+    const startBalance = Number(document.getElementById("startBalance").value);
+    console.log("balance", startBalance);
+    this.setState({myaccount: new Account(1, "savings", startBalance), myBalance: startBalance});
   }
 // console.log(myaccount);
 
@@ -39,12 +39,12 @@ class SingleAccount extends React.Component {
       <div className="single-account">
         <h2>My Account {this.whosAccount}</h2>
         <input 
-          id="initialBalance" 
+          id="startBalance" 
           type="number"
           placeholder="Enter a Balance"
           />
         <br />
-        <button className="button" onClick={this.onCreateClick}>Create Account</button>
+        <button className="text-btn" onClick={this.onCreateClick}>Create Account</button>
         <hr />
         <input 
           id="amount" 
@@ -52,15 +52,14 @@ class SingleAccount extends React.Component {
           placeholder="Enter amount"
           />
         <br />
-        <button className="button" onClick={this.onDepositClick}>Deposit</button>
-        <button className="button" onClick={this.handleMath}>Withdrawal</button>
+        <button className="text-btn" onClick={this.onDepositClick}>Deposit</button>
+        <button className="text-btn" onClick={this.handleMath}>Withdrawal</button>
         
         <h3>Account Balance: {this.state.myBalance} </h3>
       </div>
     )
   }
 }
-
 
 export default SingleAccount;
 
