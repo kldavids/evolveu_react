@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Kristina's Life in the Water</h1>
-        <h3>HOME -- MATH -- ACCOUNT -- ACCOUNTS -- COMMUNITY</h3>
+        <h3>HOME --- MATH --- MY ACCOUNT --- ACCOUNTS --- COMMUNITY</h3>
         <Navbar handleClick={this.handleClick}/>
         {(this.state.clickName === "math")  ? <MathComp /> : null}
         {(this.state.clickName === "react") ? <LogoBody /> : null}

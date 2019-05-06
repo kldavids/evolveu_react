@@ -4,6 +4,7 @@ import multiplyicon from '../images/multiplyicon.png';
 import divideicon from '../images/divideicon.png';
 import addicon from '../images/addicon.png';
 import subicon from '../images/subicon.png';
+import eraser from '../images/eraser.png';
 
 class MathComp extends React.Component {
   constructor() {
@@ -20,6 +21,11 @@ class MathComp extends React.Component {
     // console.log("target is", e.target);
     const a = Number(document.getElementById("input1").value);
     const b = Number(document.getElementById("input2").value);
+
+console.log("case?", operator);
+console.log(a);
+console.log(b);
+console.log(this.state.result);
 
 
     switch(operator) {
@@ -46,7 +52,7 @@ class MathComp extends React.Component {
         break;
 
       default:
-        console.log("End")
+        alert("Unknown math operation");
     }
   }
 
@@ -54,28 +60,30 @@ class MathComp extends React.Component {
     return (
       <div className="math-container">
         <h2>My Simple Calculator</h2>
-        <input id="input1" type="number" placeholder="Enter 1st Number"/>
-        <input id="input2" type="number" placeholder="Enter 2nd Number"/>
+        <input id="input1" type="number" placeholder="Enter Number"/>
+        <input id="input2" type="number" placeholder="Enter Number"/>
         <hr></hr>
-        <button className="icon-btn" operator="Add" onClick={this.handleMath}>
-          <img  className="icon-img" src={addicon} />
+        <button className="icon-btn" >
+          <img  operator="Add" onClick={this.handleMath} className="icon-img" src={addicon} alt="addicon" />
         </button>
 
-        <button className="icon-btn" operator="Sub" onClick={this.handleMath}>
-          <img  className="icon-img" src={subicon} />
+        <button className="icon-btn" >
+          <img  operator="Sub" onClick={this.handleMath} className="icon-img" src={subicon} alt="subicon" />
         </button>
 
-        <button className="icon-btn" operator="Divide" onClick={this.handleMath}>
-          <img  className="icon-img" src={divideicon} />
+        <button className="icon-btn" >
+          <img  operator="Divide" onClick={this.handleMath} className="icon-img" src={divideicon} alt="divideicon" />
         </button>
         
-        <button className="icon-btn" operator="Multiply" onClick={this.handleMath}>
-          <img  className="icon-img" src={multiplyicon} />
+        <button className="icon-btn" >
+          <img  operator="Multiply" onClick={this.handleMath} className="icon-img" src={multiplyicon} alt="multiplyicon" />
         </button>
         
-        <button className="icon-btn" operator="Clear" onClick={this.handleMath}>Clear</button>
+        <button className="icon-btn" >
+          <img operator="Clear" onClick={this.handleMath} className="icon-img" src={eraser} alt="eraser" />
+        </button>
         <hr></hr>
-        <p>Result: {this.state.result}</p>
+        <h2>Result: {this.state.result}</h2>
       </div>
     );
   }

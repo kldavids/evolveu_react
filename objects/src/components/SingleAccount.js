@@ -5,7 +5,7 @@ class SingleAccount extends React.Component {
   constructor(){
     super();
     this.state = {
-      myBalance: "",
+      balance: "",
       myaccount: {}
     }
   }
@@ -14,19 +14,18 @@ class SingleAccount extends React.Component {
   // create an account
   onCreateClick = () => {
     console.log("in onCreate");
-    const startBalance = Number(document.getElementById("startBalance").value);
-    console.log("balance", startBalance);
-    this.setState({myaccount: new Account(1, "savings", startBalance), myBalance: startBalance});
+    const accBalance = Number(document.getElementById("accBalance").value);
+    console.log("balance", accBalance);
+    this.setState({myaccount: new Account(0, "Kristina's", accBalance), myBalance: accBalance});
   }
-// console.log(myaccount);
+
 
   // deposit button
   onDepositClick = () => {
     console.log("in onDeposit");
     const amount = Number(document.getElementById("amount").value);
     console.log("dep amount", amount);
-    // this.setState({myBalance: this.state.myaccount.deposit(amount)});
-    // console.log("balance", this.myBalance);
+   
   }
 
   // withdrawal button
@@ -37,11 +36,11 @@ class SingleAccount extends React.Component {
   render(){
     return(
       <div className="single-account">
-        <h2>My Account {this.whosAccount}</h2>
+        <h2>My Account {this.accName}</h2>
         <input 
           id="startBalance" 
           type="number"
-          placeholder="Enter a Balance"
+          placeholder="Enter Initial Balance"
           />
         <br />
         <button className="text-btn" onClick={this.onCreateClick}>Create Account</button>
@@ -55,7 +54,7 @@ class SingleAccount extends React.Component {
         <button className="text-btn" onClick={this.onDepositClick}>Deposit</button>
         <button className="text-btn" onClick={this.handleMath}>Withdrawal</button>
         
-        <h3>Account Balance: {this.state.myBalance} </h3>
+        <h3>Account Balance: {this.state.balance} </h3>
       </div>
     )
   }
