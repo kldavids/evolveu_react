@@ -10,12 +10,13 @@ test('create an account and check if can dep and withdraw', () => {
   expect(accountTest.accBalance).toBe (120);
   accountTest.withdrawAmt(50);
   expect(accountTest.accBalance).toBe (70);
-  accountTest.depositAmt(20);
-  expect(accountTest.accBalance).toBe (90);
-  accountTest.withdrawAmt(50);
-  expect(accountTest.accBalance).toBe (40);
- 
-  expect(accountTest.accBalance).toBe (40);
+  accountTest.depositAmt(15);
+  expect(accountTest.accBalance).toBe (85);
+  accountTest.withdrawAmt(40);
+  expect(accountTest.accBalance).toBe (45);
+
+  accountTest.currentBalance();
+  expect(accountTest.accBalance).toBe (45);
 })
 
 

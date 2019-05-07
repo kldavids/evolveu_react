@@ -2,33 +2,39 @@ import React from 'react';
 import Account from './Account';
 
 class SingleAccount extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
-      balance: "",
-      myaccount: {}
+      accBalance: "",
+      myAccount: {}
     }
   }
 
 // methods to handle all click events for buttons
-  // create an account
+// create my first account
   onCreateClick = () => {
     console.log("in onCreate");
-    const accBalance = Number(document.getElementById("accBalance").value);
-    console.log("balance", accBalance);
-    this.setState({myaccount: new Account(0, "Kristina's", accBalance), myBalance: accBalance});
+    const startBalance = Number(document.getElementById("startBalance").value);
+    console.log("initial balance", startBalance);
+    this.setState({myAccount: new Account(0, "First Account", startBalance), accBalance: startBalance});
+   
   }
-
 
   // deposit button
   onDepositClick = () => {
     console.log("in onDeposit");
     const amount = Number(document.getElementById("amount").value);
     console.log("dep amount", amount);
-   
+    this.setState({accBalance: this.state.myAccount.depositAmt(amount)})
   }
 
-  // withdrawal button
+  // withdraw button
+  onWithdrawClick = () => {
+    console.log("in onWithdraw");
+    const amount = Number(document.getElementById("amount").value);
+    console.log("withdraw amount", amount);
+    this.setState({accBalance: this.state.myAccount.withdrawAmt(amount)})
+  }
 
   // check balance button?
 
@@ -36,25 +42,21 @@ class SingleAccount extends React.Component {
   render(){
     return(
       <div className="single-account">
-        <h2>My Account {this.accName}</h2>
-        <input 
-          id="startBalance" 
-          type="number"
-          placeholder="Enter Initial Balance"
-          />
-        <br />
-        <button className="text-btn" onClick={this.onCreateClick}>Create Account</button>
-        <hr />
-        <input 
-          id="amount" 
-          type="number"
-          placeholder="Enter amount"
-          />
-        <br />
-        <button className="text-btn" onClick={this.onDepositClick}>Deposit</button>
-        <button className="text-btn" onClick={this.handleMath}>Withdrawal</button>
-        
-        <h3>Account Balance: {this.state.balance} </h3>
+        <h1>Fishing for MONEY</h1>
+        <h3>{this.state.myAccount.accName}</h3>
+          <div> 
+            <input id="startBalance" type="number" placeholder="Enter Initial Balance" />
+            <br />
+            <button className="text-btn" onClick={this.onCreateClick}>Create Account</button>
+
+            <hr /> 
+            <input id="amount" type="number" placeholder="Enter amount" />
+            <br />
+            <button id="depositAmt" className="text-btn" onClick={this.onDepositClick}>Deposit</button>
+            <button id="withdrawAmt" className="text-btn" onClick={this.onWithdrawClick}>Withdraw</button>
+            <h3>Account Balance: ${this.state.myAccount.accBalance} </h3>
+            {console.log("balance", this.state.myAccount.accBalance)}
+          </div>
       </div>
     )
   }

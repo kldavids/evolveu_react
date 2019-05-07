@@ -22,12 +22,6 @@ class MathComp extends React.Component {
     const a = Number(document.getElementById("input1").value);
     const b = Number(document.getElementById("input2").value);
 
-console.log("case?", operator);
-console.log(a);
-console.log(b);
-console.log(this.state.result);
-
-
     switch(operator) {
       case 'Add':
         this.setState({result: math.sum (a, b)});
@@ -52,14 +46,14 @@ console.log(this.state.result);
         break;
 
       default:
-        alert("Unknown math operation");
+        console.log("Unknown math operation");
     }
   }
 
   render(){
     return (
       <div className="math-container">
-        <h2>My Simple Calculator</h2>
+        <h2>Simple Calculator</h2>
         <input id="input1" type="number" placeholder="Enter Number"/>
         <input id="input2" type="number" placeholder="Enter Number"/>
         <hr></hr>

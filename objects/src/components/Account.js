@@ -1,9 +1,9 @@
 class Account {
-  constructor(id, accName, accBalance){
+  constructor(accId, accName, startBalance){
     // console.log("The account is being created");
     this.accId = accId;
     this.accName = accName;
-    this.accBalance = accBalance;
+    this.accBalance = startBalance;
   }
 
   depositAmt(amount) {
