@@ -5,6 +5,7 @@ import divideicon from '../images/divideicon.png';
 import addicon from '../images/addicon.png';
 import subicon from '../images/subicon.png';
 import eraser from '../images/eraser.png';
+import '../components/MathComp.css';
 
 class MathComp extends React.Component {
   constructor() {
@@ -13,6 +14,7 @@ class MathComp extends React.Component {
       result: ""
     }
   }
+
 // method to handle all click events from the math operators
   handleMath = (e) => {
     // console.log("in handleMath");
