@@ -3,8 +3,9 @@ import Navbar from './components/Navbar';
 import LogoBody from './components/LogoBody';
 import MathComp from './components/MathComp';
 import AccountComp from './components/AccountComp';
-import Accounts from './components/Accounts';
+import AccountsComp from './components/AccountsComp';
 import City from './components/City';
+
 
 class App extends Component {
   constructor() {
@@ -28,7 +29,7 @@ class App extends Component {
         {(this.state.clickName === "math")  ? <MathComp /> : null}
         {(this.state.clickName === "react") ? <LogoBody /> : null}
         {(this.state.clickName === "account") ? <AccountComp /> : null}
-        {(this.state.clickName === "accounts") ? <Accounts /> : null}
+        {(this.state.clickName === "accounts") ? <AccountsComp /> : null}
         {(this.state.clickName === "city") ? <City /> : null}
         
       </div>

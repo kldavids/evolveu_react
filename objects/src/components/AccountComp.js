@@ -12,18 +12,18 @@ class AccountComp extends React.Component {
   }
 
 // methods to handle all click events for buttons
-// create my first account
+
   onCreateClick = () => {
     const startBalance = Number(document.getElementById("startBalance").value);
-    this.setState({myAccount: new Account(0, "KD Savings", startBalance), accBalance: startBalance});
+    this.setState({myAccount: new Account(1, "KD Savings", startBalance), accBalance: startBalance});
   }
 
-   onDepositClick = () => {
+   handleButtonDeposit = () => {
     const amount = Number(document.getElementById("amount").value);
     this.setState({accBalance: this.state.myAccount.depositAmt(amount)})
   }
 
-  onWithdrawClick = () => {
+  handleButtonWithdraw = () => {
     const amount = Number(document.getElementById("amount").value);
     this.setState({accBalance: this.state.myAccount.withdrawAmt(amount)})
   }
@@ -41,8 +41,8 @@ class AccountComp extends React.Component {
           <hr /> 
           <input id="amount" type="number" placeholder="Enter amount" />
           <br />
-          <button id="depositAmt" className="text-btn" onClick={this.onDepositClick}>Deposit</button>
-          <button id="withdrawAmt" className="text-btn" onClick={this.onWithdrawClick}>Withdraw</button>
+          <button id="depositAmt" className="text-btn" onClick={this.handleButtonDeposit}>Deposit</button>
+          <button id="withdrawAmt" className="text-btn" onClick={this.handleButtonWithdraw}>Withdraw</button>
           <h3>Account Balance: {this.state.myAccount.accBalance} </h3>  
         </div>  
       </div>

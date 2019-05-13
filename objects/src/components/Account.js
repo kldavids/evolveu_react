@@ -7,12 +7,20 @@ class Account {
   }
 
   depositAmt(amount) {
+    if(amount > 0) {
     this.accBalance += amount;
+    } else {
+      alert("Entered a Negative Number or Not a Number");
+    }
     return this.accBalance;
   }
 
   withdrawAmt(amount) {
+    if(amount > 0) {
     this.accBalance -= amount;
+    } else {
+      alert("Entered a Negative Number or Not a Number");
+    }
     return this.accBalance;
   }
 
