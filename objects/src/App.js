@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import LogoBody from './components/LogoBody';
-import MathComp from './components/MathComp';
-import AccountComp from './components/AccountComp';
-import AccountsComp from './components/AccountsComp';
+import MathComp from './components/calculator/MathComp';
+import AccountComp from './components//account/AccountComp';
+import AccountsApp from './components/account/AccountsApp';
 import City from './components/City';
 
 
@@ -24,14 +24,13 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Kristina's Life in the Water</h1>
-        <h3>HOME --- MATH --- BASIC ACCOUNT --- ACCOUNTS --- COMMUNITY</h3>
+        <h5>HOME ---- MATH ---- BASIC ACCOUNT ---- ACCOUNTS ---- COMMUNITY</h5>
         <Navbar handleClick={this.handleClick}/>
         {(this.state.clickName === "math")  ? <MathComp /> : null}
         {(this.state.clickName === "react") ? <LogoBody /> : null}
         {(this.state.clickName === "account") ? <AccountComp /> : null}
-        {(this.state.clickName === "accounts") ? <AccountsComp /> : null}
+        {(this.state.clickName === "accounts") ? <AccountsApp /> : null}
         {(this.state.clickName === "city") ? <City /> : null}
-        
       </div>
     );
   }

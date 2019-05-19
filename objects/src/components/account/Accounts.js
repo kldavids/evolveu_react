@@ -27,14 +27,28 @@ class Accounts {
     }
 
   maxAccount (){
-
+    if(this.accountList.length > 0) {
+      let maxBalance = this.accountList[0].accBalance;
+      this.accountList.forEach(item => {
+        if(item.accBalance > maxBalance){
+          maxBalance = item.accBalance;
+        };
+      });
+      return maxBalance;
+    }
   }
-
+  
   minAccount (){
-
+    if(this.accountList.length > 0) {
+      let minBalance = this.accountList[0].accBalance;
+        this.accountList.forEach(item => {
+          if(item.accBalance < minBalance){
+            minBalance = item.accBalance;
+          };
+        });
+      return minBalance;
+    } 
   }
-
-
 
 }
 

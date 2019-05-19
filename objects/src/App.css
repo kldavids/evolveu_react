@@ -24,14 +24,14 @@
 
 .App-dolphin {
   animation: App2-logo-spin infinite 10s linear;
-  height: 20vmin;
+  height: 15vmin;
   pointer-events: fill;
   padding: 3vmin;
 }
 
 .App-fish {
   animation: App-logo-spin infinite 10s linear;
-  height: 20vmin;
+  height: 15vmin;
   pointer-events: fill;
   padding: 3vmin;
 }
@@ -45,7 +45,7 @@
 
 .App-crab {
   animation: App-logo-spin infinite 10s linear;
-  height: 17vmin;
+  height: 15vmin;
   pointer-events: fill;
   padding: 3vmin;
 }

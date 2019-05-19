@@ -8,7 +8,7 @@ import homeicon from '../images/homeicon.png';
 
 const Navbar = (props) => {
   return (
-    <div>
+    <div >
       <img src={homeicon} className="App-home" alt="home" name="react" onClick={props.handleClick}/>
       <img src={dolphin} className="App-dolphin" alt="dolphin" name="math" onClick={props.handleClick} />
       <img src={fish} className="App-fish" alt="fish" name="account" onClick={props.handleClick}/>

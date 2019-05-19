@@ -1,11 +1,11 @@
 import React from 'react';
 import math from './math';
-import multiplyicon from '../images/multiplyicon.png';
-import divideicon from '../images/divideicon.png';
-import addicon from '../images/addicon.png';
-import subicon from '../images/subicon.png';
-import eraser from '../images/eraser.png';
-import '../components/MathComp.css';
+import multiplyicon from './mathicons/multiplyicon.png';
+import divideicon from './mathicons/divideicon.png';
+import addicon from './mathicons/addicon.png';
+import subicon from './mathicons/subicon.png';
+import eraser from './mathicons/eraser.png';
+import './MathComp.css';
 
 class MathComp extends React.Component {
   constructor() {

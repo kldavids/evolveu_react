@@ -1,6 +1,6 @@
 import React from 'react';
 import Account from './Account';
-import '../components/AccountComp.css';
+import './AccountComp.css';
 
 class AccountComp extends React.Component {
   constructor(props){
@@ -43,7 +43,7 @@ class AccountComp extends React.Component {
           <br />
           <button id="depositAmt" className="text-btn" onClick={this.handleButtonDeposit}>Deposit</button>
           <button id="withdrawAmt" className="text-btn" onClick={this.handleButtonWithdraw}>Withdraw</button>
-          <h3>Account Balance: {this.state.myAccount.accBalance} </h3>  
+          <h4>Account Balance: ${this.state.myAccount.accBalance} </h4>  
         </div>  
       </div>
     )
