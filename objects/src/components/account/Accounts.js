@@ -6,9 +6,9 @@ class Accounts {
     this.counter = 1;
   }
 
-  addAccount (accName, startBalance){
-    const newAccount = new Account (this.counter, accName, startBalance);
-    this.accountList.push(newAccount);
+  addAccount (accName, accBalance){
+    const tempAccount = new Account (this.counter, accName, accBalance);
+    this.accountList.push(tempAccount);
     this.counter++;
   };
 

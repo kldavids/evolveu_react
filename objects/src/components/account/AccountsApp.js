@@ -1,6 +1,6 @@
 import React from 'react';
 import AccountsTable from './AccountsTableComp';
-import AccountCardComp from './AccountCardComp';
+// import AccountForm from './AccountFormComp';
 import Accounts from './Accounts';
 import './AccountsApp.css';
 
@@ -15,46 +15,66 @@ class AccountsApp extends React.Component {
  
     this.state = {
       accControl: this.accControl,
+      accIndex: null
     }
   }
-  
- onAddClick = () => {
-		this.accControl.addAccount(null, "new account", "default user");
-		this.setState({accControl: this.accControl});
+
+  addAccountClick = () => {
+    const newAccount = (document.getElementById("newName").value);
+    const newBalance = Number(document.getElementById("newBalance").value);
+
+		this.accControl.addAccount(newAccount, newBalance);
+    this.setState({accControl: this.accControl});
+    document.getElementById("newName").value = "";
+    document.getElementById("newBalance").value = "";
   };
 
+  removeAccount = accIndex => {
+    this.setState({ accControl: this.props.accountList.filter((account, i) => {
+      return i !== accIndex;
+      })
+    });
+  }
 
+  
+
+
+  
   render(){
-    const accountCard = this.state.accControl.accountList.map(item => {
-			return (
-				<li className="accountCard" key={item.accID}>
-					<AccountCardComp 
-						accData={item} 
-					/>
-				</li>
-			);
-		});
+    
     return(
-
       <div>
         <header>
           <h1>The Ocean Bank</h1>
           <div className="row my-3">
-          <div className="col-4 text-center mb-2">
-            <h3>Accounts Total: ${this.accControl.totalAccounts()}</h3>
+            <div className="col-4 text-center mb-2">
+              <h3>Accounts Total: ${this.accControl.totalAccounts()}</h3>
+            </div>
+            <div className="col-4 text-center">
+              <h3>Max Account: ${this.accControl.maxAccount()}</h3>
+            </div>
+            <div className="col-4 text-center">
+              <h3>Min Account: ${this.accControl.minAccount()}</h3>
+            </div>
           </div>
-          <div className="col-4 text-center">
-            <h3>Max Account: ${this.accControl.maxAccount()}</h3>
+          <div className="input-group mb-3 input-group-lg">
+            <input type="text" id="newName" placeholder="Name of Account"/>
+            <input type="number" id="newBalance" placeholder="Initial Amount "/>
+            <button className="text-btn" onClick={this.addAccountClick}>Add Account</button>  
           </div>
-          <div className="col-4 text-center">
-            <h3>Min Account: ${this.accControl.minAccount()}</h3>
+          <div>
+          <AccountsTable 
+            accData={this.state.accControl.accountList}
+            removeAccount={this.removeAccount}
+          />
+
           </div>
-          </div>
-            <button className="text-btn" onClick={this.onAddClick}>Add Account</button>
         </header>
-        <AccountsTable 
-          
-        />
+
+    
+
+        
+        {/* <AccountForm handleSubmit={this.handleSubmit} /> */}
       </div>
 
 

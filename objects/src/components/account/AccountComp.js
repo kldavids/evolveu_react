@@ -16,16 +16,19 @@ class AccountComp extends React.Component {
   onCreateClick = () => {
     const startBalance = Number(document.getElementById("startBalance").value);
     this.setState({myAccount: new Account(1, "KD Savings", startBalance), accBalance: startBalance});
+    document.getElementById("startBalance").value = "";
   }
 
    handleButtonDeposit = () => {
     const amount = Number(document.getElementById("amount").value);
     this.setState({accBalance: this.state.myAccount.depositAmt(amount)})
+    document.getElementById("amount").value = "";
   }
 
   handleButtonWithdraw = () => {
     const amount = Number(document.getElementById("amount").value);
     this.setState({accBalance: this.state.myAccount.withdrawAmt(amount)})
+    document.getElementById("amount").value = "";
   }
 
   render(){
