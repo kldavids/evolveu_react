@@ -1,3 +1,10 @@
+h1, h2, h3, h4, h5 {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
 #title {
   text-align: center;
   font-family: arial, sans-serif;
@@ -26,4 +33,38 @@
   text-align: center;
   background-color: #4CAF50;
   color: white;
+}
+
+table {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+.createAccount {
+  display: block;
+  width: 540px;
+  height: 100px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 29px 29px 29px 29px;
+  -moz-border-radius: 29px 29px 29px 29px;
+  -webkit-border-radius: 29px 29px 29px 29px;
+  border: 3px solid #000000;
+}
+
+.accountToEdit{
+  display: block;
+  width: 450px;
+  height: 200px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 29px 29px 29px 29px;
+  -moz-border-radius: 29px 29px 29px 29px;
+  -webkit-border-radius: 29px 29px 29px 29px;
+  border: 3px solid #000000;
+}
+
+.tableHeader {
+  background-color: rgb(132, 223, 135);
 }
