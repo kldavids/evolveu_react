@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-logo-stop {
+  animation: App-logo-spin infinite 0s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-home {
+  animation: App-logo-spin infinite 0s linear;
+  height: 15vmin;
+  pointer-events: fill;
+  padding: 3vmin;
+}
+
+.App-dolphin {
+  animation: App2-logo-spin infinite 10s linear;
+  height: 15vmin;
+  pointer-events: fill;
+  padding: 3vmin;
+}
+
+.App-fish {
+  animation: App-logo-spin infinite 10s linear;
+  height: 15vmin;
+  pointer-events: fill;
+  padding: 3vmin;
+}
+
+.App-frog {
+  animation: App2-logo-spin infinite 10s linear;
+  height: 15vmin;
+  pointer-events: fill;
+  padding: 3vmin;
+}
+
+.App-crab {
+  animation: App-logo-spin infinite 10s linear;
+  height: 15vmin;
+  pointer-events: fill;
+  padding: 3vmin;
+}
+
+.App-main {
+  background-color: #19408d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes App2-logo-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+  
+
+  
