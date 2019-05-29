@@ -60,8 +60,8 @@ test('check community controller ', () => {
   console.log("test whichSphere method - North");
   expect(communityTest.whichSphere(0)).toBe("Northern Hemisphere");
 
-  // console.log("test whichSphere method - South");
-  // expect(communityTest.whichSphere(5)).toBe("Southern Hemisphere");
+  console.log("test whichSphere method - South");
+  expect(communityTest.whichSphere(4)).toBe("Southern Hemisphere");
 
   console.log("test removeCity method");
   communityTest.removeCity(2);

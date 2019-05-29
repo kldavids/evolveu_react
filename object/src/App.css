@@ -84,7 +84,7 @@
 }
 /* 
 .backdrop {
-  background-image: "url(" + "images/oceanimage.jpg" + ")";
+  background-image: url("/images/oceanimage.jpg");   or use just background and put it in body {} to overwrite the white
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

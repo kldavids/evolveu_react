@@ -41,7 +41,7 @@ class AccountsTable extends React.Component {
     return (
       <table className="table table-striped">
         <TableHeader />
-        <TableBody accData={this.props.accData} remAccountClick={this.props.remAccountClick}  editAccount={this.props.editAccount}/>
+        <TableBody accData={this.props.accData} remAccountClick={this.props.remAccountClick}  editAccountClick={this.props.editAccountClick}/>
       </table>
     );
   }

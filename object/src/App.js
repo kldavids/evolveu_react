@@ -4,8 +4,7 @@ import LogoBody from './components/LogoBody';
 import MathComp from './components/calculator/MathComp';
 import AccountComp from './components//account/AccountComp';
 import AccountsApp from './components/account/AccountsApp';
-import City from './components/city/City';
-import CityComp from './components/city/CityComp';
+import GlobeApp from './components/city/GlobeApp';
 
 
 class App extends Component {
@@ -31,7 +30,7 @@ class App extends Component {
         {(this.state.clickName === "react") ? <LogoBody /> : null}
         {(this.state.clickName === "account") ? <AccountComp /> : null}
         {(this.state.clickName === "accounts") ? <AccountsApp /> : null}
-        {(this.state.clickName === "city") ? <CityComp /> : null}
+        {(this.state.clickName === "city") ? <GlobeApp /> : null}
       </div>
     );
   }
