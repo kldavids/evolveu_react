@@ -4,7 +4,7 @@ test('check accounts controller  - add, remove, edit ', () => {
   const accountsTest = new Accounts();
   expect(accountsTest.accountList.length).toBe(0);
 
-  console.log("test add account");
+  console.log("test addAccount method");
   accountsTest.addAccount("KD Checking", 300);
   expect(accountsTest.accountList.length).toBe(1);
   expect(accountsTest.accountList[0].accId).toBe(1);

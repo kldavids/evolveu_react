@@ -82,7 +82,12 @@
     transform: rotate(0deg);
   }
 }
-
-  
+/* 
+.backdrop {
+  background-image: "url(" + "images/oceanimage.jpg" + ")";
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
 
   

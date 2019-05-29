@@ -10,7 +10,7 @@ class Accounts {
     const tempAccount = new Account (this.counter, accName, accBalance);
     this.accountList.push(tempAccount);
     this.counter++;
-  };
+  }
 
   removeAccount (removeId){
     const tempList = this.accountList.filter(item => {
