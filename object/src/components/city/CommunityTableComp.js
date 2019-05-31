@@ -16,6 +16,8 @@ class CommunityTable extends React.Component {
 						<th>Latitude</th>
 						<th>Longitude</th>
 						<th>Population</th>
+						<th>Type</th>
+						<th>Which Sphere?</th>
 					</tr>
 				</thead>
 			);
