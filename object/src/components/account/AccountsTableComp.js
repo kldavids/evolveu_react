@@ -10,7 +10,7 @@ class AccountsTable extends React.Component {
 		const TableHeader = () => { 
 			return (
 				<thead >
-					<tr className="tableHeader">
+					<tr className="tableAccountHeader">
 						<th>Account ID</th>
 						<th>Account Name</th>
 						<th>Account Balance</th>

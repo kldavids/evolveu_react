@@ -4,9 +4,11 @@ import './GlobeApp.css';
 class CommunityTable extends React.Component {
   constructor (props) {
     super (props);
-  }
+	}
+	
 
-  render() {
+	
+	  render() {
     const TableHeader = () => { 
 			return (
 				<thead >
@@ -17,7 +19,10 @@ class CommunityTable extends React.Component {
 						<th>Longitude</th>
 						<th>Population</th>
 						<th>Type</th>
-						<th>Which Sphere?</th>
+						<th>Global Location</th>
+						<th></th>
+						<th></th>
+						<th></th>
 					</tr>
 				</thead>
 			);
@@ -32,7 +37,9 @@ class CommunityTable extends React.Component {
 						<td>{row.cityLat}</td>
             <td>{row.cityLong}</td>
             <td>{row.cityPop}</td>
-            <td>{row.type}</td>
+            <td>{row.howBig()}</td>
+						<td><button type="button" onClick={this.whichSphereClick}>?</button></td>
+						<td>{this.whichSphere}</td>
 						<td><button type="button" id={"rem" + row.cityId}  onClick={this.props.remCityClick}>Delete</button></td>
 						<td><button type="button" id={"edit" + row.cityId} onClick={this.props.editCityClick}>Edit</button></td>
 					</tr>
@@ -44,7 +51,7 @@ class CommunityTable extends React.Component {
     return (
       <table className="table table-striped">
         <TableHeader />
-        <TableBody cityData={this.props.cityData} remCityClick={this.props.remCityClick}  editCityClick={this.props.editCityClick}/>
+        <TableBody cityData={this.props.cityData} remCityClick={this.props.remCityClick}  editCityClick={this.props.editCityClick} />
       </table>
     )
   }

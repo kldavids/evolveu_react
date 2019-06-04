@@ -50,5 +50,11 @@ test('should test the howBig method', () => {
 
 })
 
+test('object reference verification ', () => {
+  const myCity = new City ()
+  
+})
+
+
   
 

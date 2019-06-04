@@ -64,7 +64,8 @@ class GlobeApp extends React.Component {
   }
 
   render () {
-    
+
+
     return (
       <div>
         <header>
@@ -80,7 +81,6 @@ class GlobeApp extends React.Component {
             <div className="col-4 text-center">
               <h3>City Most Southern: {this.cityControl.getMostSouthern()}</h3>
             </div>
-
           </div>
         </header>
      
@@ -112,6 +112,7 @@ class GlobeApp extends React.Component {
             cityData={this.state.cityControl.cityList}
             remCityClick={this.remCityClick}
             editCityClick={this.editCityClick}
+            whichSphere={this.whichSphere}
           />
         </div>
       </div>
