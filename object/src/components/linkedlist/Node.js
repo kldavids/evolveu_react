@@ -1,9 +1,9 @@
 class Node {
-  constructor(subject, amount){
+  constructor(subject, amount, next, prev){
     this.subject = subject;
     this.amount = amount;
     this.next = null;
-    // this.prev = null;
+    this.prev = null;
   }
 
   show() {
