@@ -30,51 +30,68 @@ describe('Testing the LinkedList class', () => {
   })
 })
 
-test('test creating a linkedList with add, delete, total ', () => {
-  console.log("test addNode method");
+test('creating a linkedList with add, delete, pointers, total ', () => {
+
+  console.log("test addNode method along with first, last, next, previous");
   const testList = new LinkedList();
   testList.addNode("red", 10);
-  console.log("node1", testList);
   expect(testList.length).toBe(1);
-  expect(testList.tail.subject).toBe("red");
+  expect(testList.firstNode()).toEqual("red");
+  expect(testList.lastNode()).toEqual("red");
+  console.log("1st node", testList);
 
   testList.addNode("orange", 20);
-  console.log("node2", testList);
   expect(testList.length).toBe(2);
-  expect(testList.head.subject).toBe("red");
-  expect(testList.tail.subject).toBe("orange");
+  expect(testList.firstNode()).toEqual("red");
+  expect(testList.lastNode()).toEqual("orange");
+  console.log("2nd node", testList);
 
   testList.addNode("yellow", 30);
-  console.log("node3", testList);
   expect(testList.length).toBe(3);
-  expect(testList.head.subject).toBe("red");
-  expect(testList.tail.subject).toBe("yellow");
+  expect(testList.firstNode()).toEqual("red");
+  expect(testList.lastNode()).toEqual("yellow");
+  console.log("3rd node", testList);
 
-  console.log("test to add a new node between Node1 and 2");
-  testList.currentNode = testList.head;
-  console.log("what node is current?", testList.currentNode);
   testList.addNode("green", 40);
-  console.log("node4", testList);
   expect(testList.length).toBe(4);
-  expect(testList.head.subject).toBe("red");
-  expect(testList.tail.subject).toBe("yellow");
+  expect(testList.firstNode()).toEqual("red");
+  expect(testList.lastNode()).toEqual("green");
+  console.log("4th node", testList);
+
+
+
+  console.log("verify nextNode & previousNode pointer functionality");
+  expect(testList.currentNode.subject).toEqual("green");
+  testList.previousNode();
+  expect(testList.currentNode.subject).toEqual("yellow");
+  console.log(testList);
+  testList.previousNode();
+  expect(testList.currentNode.subject).toEqual("orange");
+  console.log(testList);
+  testList.nextNode();
+  testList.nextNode();
+  expect(testList.currentNode.subject).toEqual("green");
+  console.log(testList);
 
   console.log("what is the totalAmount");
   expect(testList.totalAmount()).toBe(100);
 
-  console.log("test deleteNode method of head node");
-  testList.deleteNode("red", 10);
-  console.log("remove node1", testList);
-  expect(testList.length).toBe(3);
-  expect(testList.head.subject).toBe("green");
-  expect(testList.tail.subject).toBe("yellow");
+  console.log("check delete method");
+  expect(testList.currentNode.subject).toEqual("green");
+  console.log("delete current node/tail node");
+  testList.deleteNode();
+  console.log(testList);
+  testList.previousNode();
+  testList.previousNode();
+  expect(testList.currentNode.subject).toEqual("red");
+  console.log("delete head node");
+  testList.deleteNode();
+  console.log(testList);
 
-  console.log("test deleteNode method of middle node");
-  testList.deleteNode("orange", 20);
-  console.log("remove node2", testList);
-  expect(testList.length).toBe(2);
-  expect(testList.head.subject).toBe("green");
-  expect(testList.tail.subject).toBe("yellow");
+  testList.addNode("blue", 50);
+  expect(testList.length).toBe(3);
+  expect(testList.currentNode.subject).toEqual("blue");
+  console.log("5th node", testList);
 
 })
 

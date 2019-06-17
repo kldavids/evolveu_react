@@ -1,0 +1,84 @@
+h1, h2, h3, h4, h5 {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+#title {
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+
+.text-btn {
+  background-color: #1f1e38;
+  border: 2px solid #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  margin: 3px 1px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.text-btn:hover {opacity: 1}
+
+.createNode {
+  display: block;
+  width: 500px;
+  height: 100px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: 29px 29px 29px 29px;
+  -moz-border-radius: 29px 29px 29px 29px;
+  -webkit-border-radius: 29px 29px 29px 29px;
+  border: 3px solid #000000;
+}
+
+.updateNode {
+  display: block;
+  width: 520px;
+  height: 100px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: 29px 29px 29px 29px;
+  -moz-border-radius: 29px 29px 29px 29px;
+  -webkit-border-radius: 29px 29px 29px 29px;
+  border: 3px solid #000000;
+}
+
+.removeNode {
+  display: block;
+  width: 180px;
+  height: 100px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 29px 29px 29px 29px;
+  -moz-border-radius: 29px 29px 29px 29px;
+  -webkit-border-radius: 29px 29px 29px 29px;
+  border: 3px solid #000000;
+}
+
+.stack {
+  display: block;
+  width: 500px;
+  height: 200px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: 29px 29px 29px 29px;
+  -moz-border-radius: 29px 29px 29px 29px;
+  -webkit-border-radius: 29px 29px 29px 29px;
+  border: 3px solid #000000;
+  text-align: left;
+}
