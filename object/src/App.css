@@ -50,6 +50,13 @@
   padding: 3vmin;
 }
 
+.App-worm {
+  animation: App2-logo-spin infinite 10s linear;
+  height: 15vmin;
+  pointer-events: fill;
+  padding: 3vmin;
+}
+
 .App-main {
   background-color: #19408d;
   min-height: 100vh;
@@ -82,12 +89,6 @@
     transform: rotate(0deg);
   }
 }
-/* 
-.backdrop {
-  background-image: url("/images/oceanimage.jpg");   or use just background and put it in body {} to overwrite the white
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
+
 
   

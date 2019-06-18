@@ -3,6 +3,7 @@ import dolphin from '../images/dolphin.png';
 import fish from '../images/fish.png';
 import frog from '../images/frog.png';
 import crab from '../images/crab.png';
+import worm from '../images/worm.png';
 import homeicon from '../images/homeicon.png';
 
 
@@ -14,6 +15,7 @@ const Navbar = (props) => {
       <img src={fish} className="App-fish" alt="fish" name="account" onClick={props.handleClick}/>
       <img src={frog} className="App-frog" alt="frog" name="accounts" onClick={props.handleClick}/>
       <img src={crab} className="App-crab" alt="crab" name="city" onClick={props.handleClick}/>
+      <img src={worm} className="App-worm" alt="worm" name="linkedlist" onClick={props.handleClick}/>
     </div>
   );
 }

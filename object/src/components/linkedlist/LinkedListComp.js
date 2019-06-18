@@ -79,6 +79,7 @@ class LinkedListComp extends React.Component {
       <div>
         <header>
           <h1>Inch YOUR way through LinkedList</h1>
+          < hr />
           <div className="row my-3">
             <div className="col-4 text-center">
               <h3>Current Node Subject =>  {this.linkControl.showCurrentSubject()}</h3>
